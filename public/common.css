@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  font-size: 13px;
+}
+
+body {
+  font-family: Verdana Pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #5c5c5c;
+  background: #fff;
+  line-height: 1.65;
+  margin: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.Container {
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.Heading {
+  font-family: Verdana Pro,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #0f1849;
+  transition: color 0.2s ease-in-out;  
+  letter-spacing: 0.2em;
+  text-transform: uppercase;  
+}
+
+.Link {
+  transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.horizontalList {
+  list-style: none;
+  margin: -6px -8px;
+}
+
+.horizontalList_item {
+  display: inline-block;  
+  margin: 20px 8px 6px 8px; 
+}
+
+.horizontalList_item > .Link {
+  display: inline-block;
+}
+
+.horizontalList_spacingTight {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.horizontalList_spacingTight .horizontalList_item {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.horizontalList_spacingLoose {
+  margin-left: -14px;
+  margin-right: -14px;
+}
+
+.horizontalList_spacingLoose .horizontalList_item {
+  margin-right: 14px;
+  margin-left: 14px;
+}
+
+.horizontalList_spacingExtraLoose {
+  margin-left: -17px;
+  margin-right: -17px;
+}
+
+.horizontalList_spacingExtraLoose .horizontalList_item {
+  margin-right: 17px;
+  margin-left: 17px;
+}
+
+.horizontalList_spacingFill {
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+.horizontalList_spacingFill .horizontalList_item {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.Rte {
+  word-break: break-word;
+}
+
+.Rte::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.Icon {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  vertical-align: middle;
+  stroke-width: 1px;
+  background: none;
+  pointer-events: none;
+}
+
+.Icon_wrapper--clickable {
+  position: relative;
+  background: transparent;
+}
+ 
+.Icon_wrapper--clickable::before { /* This is used to increase the clickable area */ 
+    position: absolute;
+    content: '';
+    top: -8px;
+    right: -12px;
+    left: -12px;
+    bottom: -8px;
+    transform: translateZ(0); /* Needed to avoid a glitch on iOS */  
+}
+
+
+@media screen and (min-width: 1140px) { /*Desk*/
+  .Container {
+    padding: 0 80px;
+  }
+
+  .horizontalList_spacingExtraLoose {
+    margin-left: -21px;
+    margin-right: -21px;
+  }
+
+  .horizontalList_spacingExtraLoose .horizontalList_item {
+    margin-right: 21px;
+    margin-left: 21px;
+  }
+}
+
+@media screen and (min-width: 641px) { /*Tablets and up*/
+  .Container {
+    padding: 0 50px;
+  }
+}
+
+/* List */
+.linkList {
+  list-style: none;
+  padding: 0;
+}
+
+.linkList_item {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+  width: 100%;
+  line-height: 1.5;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+}
+
+.linkList_item::last-child {
+  margin-bottom: 0 !important;
+}
+
+.linkList_item::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  top: calc(50% - 3px);
+  left: 0;
+  border-radius: 100%;
+  background: #5c5c5c;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.linkList_item > .Link {
+  display: block;
+  width: 100%;
+  text-align: inherit;
+}

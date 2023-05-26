@@ -1,0 +1,19 @@
+
+
+header{
+    height:60px;
+    /* border:2px solid red; */
+    background:#eefbfd;
+    color:#5c5c5c;
+}
+
+#icon{
+    float:left;
+    margin-left:2%;
+}
+
+#loginset{
+    float:right;
+    margin-right:2%;
+    margin-top:2%;
+}
