@@ -180,7 +180,7 @@ footer{
   }
       
   .Footer_block>.Footer_blockContentWrapper.is-open {
-     display: inline-block;
+     display: block;
      height: 242px;
   }
    
@@ -270,12 +270,7 @@ footer{
     flex-basis: 460px;
   }
 
-  .Footer_blockText,
-  .Footer_blockNewsletter{
-    flex-basis: 240px;
-  }
-
-  .Footer_blockNewsletter {
+  .Footer_main .Footer_blockNewsletter {
     flex-basis: 375px;
   }
 

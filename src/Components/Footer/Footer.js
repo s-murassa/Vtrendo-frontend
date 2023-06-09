@@ -1,10 +1,10 @@
 import React from 'react';
-import './Footer.css';
+import './Footer.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
-import Newsletter from './Components/Newsletter';
+import Newsletter from '../Customers/Newsletter';
 
 const Footer = () => { 
 
@@ -88,7 +88,7 @@ const Footer = () => {
                         </h2>
                         <div className={`Footer_blockContentWrapper ${tabStatus.tab2 ? "is-open" : ""}`}>
                             <div className='Footer_blockContentContainer'>
-                                <ul className='linkList'>
+                                <ul className='linkList Rte'>
                                     <li className='linkList_item'>
                                         <Link to='/search' className='Link Link--primary'>Search</Link>
                                     </li>
@@ -117,7 +117,7 @@ const Footer = () => {
                         </h2>
                         <div className={`Footer_blockContentWrapper ${tabStatus.tab3 ? "is-open" : ""}`}>
                             <div className='Footer_blockContentContainer'>
-                                <ul className='linkList'>
+                                <ul className='linkList Rte'>
                                     <li className='linkList_item'>
                                         <Link to='/shipping-policy' className='Link Link--primary'>Shipping Policy</Link>
                                     </li>
